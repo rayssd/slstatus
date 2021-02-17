@@ -67,8 +67,10 @@ static const struct arg args[] = {
 	/* function format          argument */
 /*	{ netspeed_rx, "RX%sB/s  ", "eno1"},
 	{ netspeed_tx, "TX%sB/s  ", "eno1"}, 
-	{ temp, "[Temp %s C]  ", NULL }, */
+*/	
 	{ cpu_perc, "[CPU %s%%]  ", NULL },
 	{ ram_perc, "[RAM %s%%]  ", NULL },
+	{ run_command,  "[Temp %s]  ", "sensors | grep CPU | awk '{print $2}'"},
+	{ run_command,  "[Fan %s]  ", "sensors | grep Fan | awk '{print $3, $4}'"},
 	{ datetime, "%s",           "%a %d %b %R" },
 };
