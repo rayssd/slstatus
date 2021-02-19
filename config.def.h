@@ -72,5 +72,7 @@ static const struct arg args[] = {
 	{ ram_perc, "[RAM %s%%]  ", NULL },
 	{ run_command,  "[Temp %s]  ", "sensors | grep CPU | awk '{print $2}'"},
 	{ run_command,  "[Fan %s]  ", "sensors | grep Fan | awk '{print $3, $4}'"},
+	{ battery_perc, "[Batt %s%% " , "BAT0"},
+	{ battery_state, "%s]  ", "BAT0"},
 	{ datetime, "%s",           "%a %d %b %R" },
 };
