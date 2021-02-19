@@ -74,5 +74,6 @@ static const struct arg args[] = {
 	{ run_command,  "[Fan %s]  ", "sensors | grep Fan | awk '{print $3, $4}'"},
 	{ battery_perc, "[Batt %s%% " , "BAT0"},
 	{ battery_state, "%s]  ", "BAT0"},
+	{ run_command, "[Net %s]  ", "test $(ping -c 1 8.8.8.8 | grep packet | awk '{print $6}') = 0% && echo Up || echo Down"},
 	{ datetime, "%s",           "%a %d %b %R" },
 };
